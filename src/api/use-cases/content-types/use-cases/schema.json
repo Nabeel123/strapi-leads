@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "use_cases",
+  "info": {
+    "singularName": "use-cases",
+    "pluralName": "use-cases-sections",
+    "displayName": "Use Cases Section"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "subtitle": { "type": "text", "required": true },
+    "cases": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.use-case-item"
+    },
+    "ctaPrompt": { "type": "string" },
+    "ctaText": { "type": "string", "default": "View Detailed Results" },
+    "ctaHref": { "type": "string", "default": "#audit" }
+  }
+}

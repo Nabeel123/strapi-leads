@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_sections_testimonial_items",
+  "info": { "name": "TestimonialItem", "displayName": "Testimonial Item" },
+  "options": {},
+  "attributes": {
+    "quote": { "type": "text", "required": true },
+    "author": { "type": "string", "required": true },
+    "role": { "type": "string" }
+  }
+}

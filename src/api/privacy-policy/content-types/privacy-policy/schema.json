@@ -1,0 +1,15 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policies",
+  "info": {
+    "singularName": "privacy-policy",
+    "pluralName": "privacy-policy-pages",
+    "displayName": "Privacy Policy Page"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true, "default": "Privacy Policy" },
+    "body": { "type": "richtext", "required": true }
+  }
+}

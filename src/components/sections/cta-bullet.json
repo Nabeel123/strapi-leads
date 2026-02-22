@@ -1,0 +1,8 @@
+{
+  "collectionName": "components_sections_cta_bullets",
+  "info": { "name": "CtaBullet", "displayName": "CTA Bullet" },
+  "options": {},
+  "attributes": {
+    "text": { "type": "string", "required": true }
+  }
+}

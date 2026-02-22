@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_comparison_rows",
+  "info": { "name": "ComparisonRow", "displayName": "Comparison Row" },
+  "options": {},
+  "attributes": {
+    "feature": { "type": "string", "required": true },
+    "sub": { "type": "string" },
+    "aiseen": { "type": "boolean", "default": false },
+    "ads": { "type": "boolean", "default": false },
+    "referrals": { "type": "boolean", "default": false },
+    "coldCalling": { "type": "boolean", "default": false }
+  }
+}

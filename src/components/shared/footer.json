@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_footers",
+  "info": { "name": "Footer", "displayName": "Footer" },
+  "options": {},
+  "attributes": {
+    "siteName": { "type": "string", "required": true },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.footer-link"
+    },
+    "copyright": { "type": "text", "required": true }
+  }
+}

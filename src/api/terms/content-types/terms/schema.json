@@ -1,0 +1,15 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms",
+  "info": {
+    "singularName": "terms",
+    "pluralName": "terms-pages",
+    "displayName": "Terms of Service Page"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true, "default": "Terms of Service" },
+    "body": { "type": "richtext", "required": true }
+  }
+}

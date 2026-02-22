@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "name": "Hero",
+    "icon": "star",
+    "displayName": "Hero",
+    "description": "Homepage hero section - headline, subtitle, and CTAs"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": true,
+      "default": "Next-Gen Automation"
+    },
+    "titleBefore": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": true,
+      "description": "Part of title shown in accent color"
+    },
+    "titleAfter": {
+      "type": "string",
+      "required": false,
+      "description": "Rest of title after highlight"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "primaryCtaText": {
+      "type": "string",
+      "required": true,
+      "default": "Get a Free Audit"
+    },
+    "primaryCtaHref": {
+      "type": "string",
+      "required": true,
+      "default": "#audit"
+    },
+    "primaryCtaIsAnchor": {
+      "type": "boolean",
+      "default": true
+    },
+    "secondaryCtaText": {
+      "type": "string",
+      "required": true,
+      "default": "View Case Studies"
+    },
+    "secondaryCtaHref": {
+      "type": "string",
+      "required": true,
+      "default": "/blog"
+    },
+    "secondaryCtaIsAnchor": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

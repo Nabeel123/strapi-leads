@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_capability_features",
+  "info": {
+    "name": "CapabilityFeature",
+    "displayName": "Capability Feature"
+  },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text", "required": true },
+    "bullets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.bullet"
+    }
+  }
+}

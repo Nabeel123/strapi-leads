@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_pricing_tiers",
+  "info": { "name": "PricingTier", "displayName": "Pricing Tier" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "price": { "type": "string", "required": true },
+    "priceLabel": { "type": "string" },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.bullet"
+    },
+    "ctaText": { "type": "string", "required": true },
+    "ctaHref": { "type": "string", "default": "#audit" },
+    "isPopular": { "type": "boolean", "default": false }
+  }
+}

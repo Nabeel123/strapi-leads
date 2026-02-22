@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_nav_items",
+  "info": {
+    "name": "NavItem",
+    "icon": "link",
+    "displayName": "Nav Item",
+    "description": "Navigation link - use #anchor for in-page scroll or /path for page navigation"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "isAnchor": {
+      "type": "boolean",
+      "default": true,
+      "description": "If true, href is an anchor (#section). If false, href is a page path (/blog)"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_labels",
+  "info": {
+    "name": "Labels",
+    "displayName": "UI Labels",
+    "description": "All user-facing strings - no hardcoded text in frontend"
+  },
+  "options": {},
+  "attributes": {
+    "backToHome": { "type": "string", "default": "← Back to home" },
+    "noContent": { "type": "string", "default": "Add content in your Strapi admin." },
+    "noArticles": { "type": "string", "default": "No articles yet." },
+    "aboutNotFound": { "type": "string", "default": "About content not found." },
+    "contactTitle": { "type": "string", "default": "Contact" },
+    "contactPlaceholder": { "type": "string", "default": "Get in touch for a free audit. Add content in your Strapi admin." },
+    "termsTitle": { "type": "string", "default": "Terms of Service" },
+    "termsPlaceholder": { "type": "string", "default": "Add your terms of service in Strapi Admin." },
+    "privacyTitle": { "type": "string", "default": "Privacy Policy" },
+    "privacyPlaceholder": { "type": "string", "default": "Add your privacy policy in Strapi Admin." },
+    "blogTitle": { "type": "string", "default": "Blog" },
+    "blogSubtitle": { "type": "string", "default": "Latest articles and insights." },
+    "all": { "type": "string", "default": "All" },
+    "skipToContent": { "type": "string", "default": "Skip to content" },
+    "defaultSiteName": { "type": "string", "default": "AISEEN" },
+    "defaultCopyright": { "type": "string", "default": "© {year} AISEEN. All rights reserved." }
+  }
+}

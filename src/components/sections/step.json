@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_sections_steps",
+  "info": { "name": "Step", "displayName": "Step" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text", "required": true }
+  }
+}

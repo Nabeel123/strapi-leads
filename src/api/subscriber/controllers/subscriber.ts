@@ -1,0 +1,50 @@
+import { factories } from '@strapi/strapi';
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export default factories.createCoreController('api::subscriber.subscriber', ({ strapi }) => ({
+  async submit(ctx: { request: { body?: { email?: string; source?: string } }; body?: unknown; status?: number }) {
+    const { email, source = 'scroll_modal' } = ctx.request?.body ?? {};
+
+    if (!email || typeof email !== 'string') {
+      ctx.status = 400;
+      ctx.body = { error: { message: 'Email is required' } };
+      return;
+    }
+
+    const trimmed = email.trim().toLowerCase();
+    if (!EMAIL_REGEX.test(trimmed)) {
+      ctx.status = 400;
+      ctx.body = { error: { message: 'Invalid email format' } };
+      return;
+    }
+
+    try {
+      const docs = strapi.documents('api::subscriber.subscriber');
+      const existing = await docs.findFirst({
+        filters: { email: { $eq: trimmed } },
+      });
+
+      if (existing) {
+        ctx.status = 200;
+        ctx.body = { message: 'Already subscribed' };
+        return;
+      }
+
+      const doc = await docs.create({
+        data: {
+          email: trimmed,
+          source: typeof source === 'string' ? source : 'scroll_modal',
+          subscribedAt: new Date().toISOString(),
+        },
+      } as never);
+
+      ctx.status = 201;
+      ctx.body = { data: doc, message: 'Subscribed successfully' };
+    } catch (err) {
+      strapi.log.error('Subscriber submit error:', err);
+      ctx.status = 500;
+      ctx.body = { error: { message: 'Failed to subscribe' } };
+    }
+  },
+}));

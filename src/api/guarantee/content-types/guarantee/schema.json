@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "guarantees",
+  "info": {
+    "singularName": "guarantee",
+    "pluralName": "guarantee-sections",
+    "displayName": "Guarantee Section"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "subtitle": { "type": "string", "required": true },
+    "body": { "type": "text", "required": true },
+    "footnote": { "type": "text" }
+  }
+}

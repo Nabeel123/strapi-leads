@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_headers",
+  "info": {
+    "name": "Header",
+    "icon": "menu",
+    "displayName": "Header",
+    "description": "Header navigation configuration"
+  },
+  "options": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "description": "Brand name shown in header"
+    },
+    "navItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav-item",
+      "description": "Navigation links in order"
+    },
+    "ctaText": {
+      "type": "string",
+      "required": true,
+      "default": "Free Audit",
+      "description": "Call-to-action button text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "description": "Optional logo image (replaces default icon)"
+    }
+  }
+}

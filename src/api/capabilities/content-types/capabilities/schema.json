@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "capabilities_sections",
+  "info": {
+    "singularName": "capabilities",
+    "pluralName": "capabilities-sections",
+    "displayName": "Capabilities Section"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "badge": { "type": "string", "default": "Capabilities" },
+    "title": { "type": "string", "required": true },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.capability-feature"
+    }
+  }
+}

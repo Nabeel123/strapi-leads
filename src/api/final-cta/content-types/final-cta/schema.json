@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "final_ctas",
+  "info": {
+    "singularName": "final-cta",
+    "pluralName": "final-cta-sections",
+    "displayName": "Final CTA Section"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "body": { "type": "text", "required": true },
+    "subtext": { "type": "string" },
+    "bulletsTitle": { "type": "string", "default": "What We'll Cover:" },
+    "bullets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.cta-bullet"
+    },
+    "ctaText": { "type": "string", "required": true },
+    "ctaHref": { "type": "string", "default": "#audit" },
+    "footerNote": { "type": "text" }
+  }
+}

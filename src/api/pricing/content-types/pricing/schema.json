@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricings",
+  "info": {
+    "singularName": "pricing",
+    "pluralName": "pricing-sections",
+    "displayName": "Pricing Section"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "subtitle": { "type": "text", "required": true },
+    "popularBadge": { "type": "string", "default": "Most Popular" },
+    "tiers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.pricing-tier"
+    }
+  }
+}

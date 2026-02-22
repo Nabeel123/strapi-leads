@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_modals",
+  "info": {
+    "singularName": "email-modal",
+    "pluralName": "email-modals",
+    "displayName": "Email Capture Modal"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Get Lead Gen Tips"
+    },
+    "subtitle": {
+      "type": "text",
+      "default": "Subscribe to get the latest strategies and insights delivered to your inbox."
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "default": "Enter your email"
+    },
+    "submitText": {
+      "type": "string",
+      "required": true,
+      "default": "Subscribe"
+    },
+    "successMessage": {
+      "type": "text",
+      "default": "Thanks! Check your inbox for our first email."
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

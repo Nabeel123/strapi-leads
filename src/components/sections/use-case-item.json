@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_use_case_items",
+  "info": { "name": "UseCaseItem", "displayName": "Use Case Item" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "result": { "type": "string", "required": true },
+    "challenge": { "type": "text" },
+    "challengeLabel": { "type": "string" },
+    "solution": { "type": "text" },
+    "solutionLabel": { "type": "string" },
+    "results": { "type": "component", "repeatable": true, "component": "shared.bullet" },
+    "resultsLabel": { "type": "string" },
+    "bonus": { "type": "text" }
+  }
+}

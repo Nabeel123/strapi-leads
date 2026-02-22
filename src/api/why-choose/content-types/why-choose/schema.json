@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "why_choose",
+  "info": {
+    "singularName": "why-choose",
+    "pluralName": "why-choose-sections",
+    "displayName": "Why Choose Section"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "subtitle": { "type": "text", "required": true },
+    "columnAiseen": { "type": "string", "default": "AISEEN" },
+    "columnAds": { "type": "string", "default": "Paid Ads" },
+    "columnReferrals": { "type": "string", "default": "Referrals" },
+    "columnColdCalling": { "type": "string", "default": "Cold Calling" },
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.comparison-row"
+    }
+  }
+}

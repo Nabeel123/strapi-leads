@@ -1,0 +1,532 @@
+{
+  "global": {
+    "siteName": "AISEEN",
+    "defaultSeo": {
+      "metaTitle": "AISEEN - AI-Powered SEO & Automation",
+      "metaDescription": "Scale your business with AI-powered SEO and automation. Lead generation and workflow bots.",
+      "shareImage": null
+    },
+    "siteDescription": "Scale your business with AI-powered SEO and automation",
+    "favicon": null,
+    "header": {
+      "siteName": "AISEEN",
+      "ctaText": "Free Audit",
+      "navItems": [
+        { "label": "How It Works", "href": "#how-it-works", "isAnchor": true },
+        { "label": "Why Choose AISEEN", "href": "#why-choose", "isAnchor": true },
+        { "label": "Use Cases", "href": "#use-cases", "isAnchor": true },
+        { "label": "Guarantee", "href": "#guarantee", "isAnchor": true },
+        { "label": "Blog", "href": "/blog", "isAnchor": false },
+        { "label": "Free Audit", "href": "#audit", "isAnchor": true }
+      ]
+    },
+    "hero": {
+      "badge": "Next-Gen Automation",
+      "titleBefore": "Scale Your Business with ",
+      "titleHighlight": "AI-Powered SEO",
+      "titleAfter": " & Automation",
+      "subtitle": "We specialize in lead generation and building complex bots to automate your most challenging workflows. Dominate your niche while our AI handles the heavy lifting.",
+      "primaryCtaText": "Get a Free Audit",
+      "primaryCtaHref": "#audit",
+      "primaryCtaIsAnchor": true,
+      "secondaryCtaText": "View Case Studies",
+      "secondaryCtaHref": "/blog",
+      "secondaryCtaIsAnchor": false
+    },
+    "footer": {
+      "siteName": "AISEEN",
+      "links": [
+        { "label": "Privacy Policy", "href": "/privacy-policy", "external": false },
+        { "label": "Terms of Service", "href": "/terms", "external": false },
+        { "label": "Contact", "href": "/contact", "external": false },
+        { "label": "LinkedIn", "href": "https://linkedin.com/company/aiseen", "external": true }
+      ],
+      "copyright": "© {year} AISEEN. All rights reserved."
+    },
+    "labels": {
+      "backToHome": "← Back to home",
+      "noContent": "Add content in your Strapi admin.",
+      "noArticles": "No articles yet.",
+      "aboutNotFound": "About content not found.",
+      "contactPlaceholder": "Get in touch for a free audit. Add content in your Strapi admin.",
+      "termsPlaceholder": "Add your terms of service in Strapi Admin.",
+      "privacyPlaceholder": "Add your privacy policy in Strapi Admin.",
+      "blogTitle": "Blog",
+      "blogSubtitle": "Latest articles and insights.",
+      "all": "All",
+      "skipToContent": "Skip to content",
+      "defaultSiteName": "AISEEN",
+      "defaultCopyright": "© {year} AISEEN. All rights reserved."
+    }
+  },
+  "sections": {
+    "capabilities": {
+      "badge": "Capabilities",
+      "title": "Enterprise AI Solutions",
+      "features": [
+        {
+          "title": "AI-Powered Outbound Lead Generation",
+          "description": "Our AI identifies and qualifies high-intent prospects across the web, turning cold outreach into warm conversations.",
+          "bullets": [
+            { "text": "Guaranteed lead volume" },
+            { "text": "Predictable sales cycles" },
+            { "text": "High-intent prospect targeting" }
+          ]
+        },
+        {
+          "title": "Personalized Multi-Channel Outreach",
+          "description": "AI-written custom copy that resonates. Reach prospects through email, LinkedIn, and more with smart follow-up sequences.",
+          "bullets": [
+            { "text": "LinkedIn & Email automation" },
+            { "text": "AI-written custom copy" },
+            { "text": "Smart follow-up sequences" }
+          ]
+        },
+        {
+          "title": "Complex Bot Automations & Integration",
+          "description": "Connect your tools and let our bots handle repetitive tasks. Real-time sync, automated booking, 24/7 monitoring.",
+          "bullets": [
+            { "text": "Real-time CRM synchronization" },
+            { "text": "Automated calendar booking" },
+            { "text": "24/7 workflow monitoring" }
+          ]
+        },
+        {
+          "title": "Data-Driven Sales Intelligence",
+          "description": "Real-time insights into your pipeline. Profile ideal customers, track intent signals, score and qualify leads.",
+          "bullets": [
+            { "text": "Ideal customer profiling" },
+            { "text": "Intent signal tracking" },
+            { "text": "Lead qualification scoring" }
+          ]
+        }
+      ]
+    },
+    "how-it-works": {
+      "title": "How It Works",
+      "subtitle": "Our proven 4-step system that generates predictable leads every month",
+      "steps": [
+        {
+          "title": "Identify Your Ideal Prospects",
+          "description": "We analyze your business and create detailed buyer personas, then use AI to find companies that match your ideal customer profile."
+        },
+        {
+          "title": "Craft Personalized Outreach",
+          "description": "Our AI system creates highly personalized messages that resonate with each prospect, increasing response rates by 300%."
+        },
+        {
+          "title": "Multi-Channel Engagement",
+          "description": "We reach prospects through email, LinkedIn, and other channels with perfectly timed sequences that feel human, not robotic."
+        },
+        {
+          "title": "Convert & Optimize",
+          "description": "We handle objections, book qualified meetings, and continuously optimize campaigns based on real performance data."
+        }
+      ]
+    },
+    "why-choose": {
+      "title": "Why Choose AISEEN Over Traditional Methods?",
+      "subtitle": "Compare our AI-powered approach to ads, referrals, and cold calling",
+      "columnAiseen": "AISEEN",
+      "columnAds": "Paid Ads",
+      "columnReferrals": "Referrals",
+      "columnColdCalling": "Cold Calling",
+      "rows": [
+        { "feature": "AI-Powered Lead Generation", "sub": "Predictable pipeline", "aiseen": true, "ads": false, "referrals": false, "coldCalling": false },
+        { "feature": "Guaranteed Results", "sub": "15-25 qualified leads monthly", "aiseen": true, "ads": false, "referrals": false, "coldCalling": false },
+        { "feature": "Cost Effective", "sub": "Lower cost per lead", "aiseen": true, "ads": false, "referrals": true, "coldCalling": true },
+        { "feature": "Scalable System", "sub": "Grows with your business", "aiseen": true, "ads": true, "referrals": false, "coldCalling": false },
+        { "feature": "Time Efficient", "sub": "Fully managed service", "aiseen": true, "ads": false, "referrals": false, "coldCalling": false }
+      ]
+    },
+    "testimonials": {
+      "title": "Real Results from Real Clients",
+      "subtitle": "See how our clients are scaling their businesses with predictable lead generation",
+      "stats": [
+        { "value": "90", "label": "Qualified Leads", "sublabel": "45 Days" },
+        { "value": "300%", "label": "Response Rate", "sublabel": "Increase" },
+        { "value": "$50K", "label": "Monthly Revenue", "sublabel": "Achieved" }
+      ],
+      "items": [
+        {
+          "quote": "Aiseen completely transformed our lead generation. We went from inconsistent results to 25+ qualified leads every month. The ROI is incredible—we're closing more deals than ever before.",
+          "author": "John Davis",
+          "role": "CEO, TechScale Solutions"
+        },
+        {
+          "quote": "The AI-powered outreach feels human and personalized. Our response rates tripled within the first 60 days. Highly recommend for any B2B company looking to scale.",
+          "author": "Sarah Chen",
+          "role": "VP Sales, Nexus Growth"
+        },
+        {
+          "quote": "We tried ads, cold calling, everything. Aiseen's system is the first that delivered predictable results. 15-25 leads every month, guaranteed.",
+          "author": "Michael Roberts",
+          "role": "Founder, Quantum Labs"
+        }
+      ]
+    },
+    "use-cases": {
+      "title": "AI Use Cases: How We Helped Agencies Automate, Scale, and Grow",
+      "subtitle": "Real results from real clients. See how our AI-powered systems transformed businesses across industries.",
+      "cases": [
+        {
+          "title": "Marketing By Prof: Manual Outreach Transformed",
+          "result": "30% increase in new clients within just 90 days",
+          "challenge": "Manual prospecting consumed countless hours with limited results.",
+          "solution": "Implemented AI-powered sequencing using Apollo and Instantly.",
+          "results": [{ "text": "30% increase in new clients within just 90 days" }],
+          "resultsLabel": "The Impact"
+        },
+        {
+          "title": "LeenWeb: Scaling Cold Outreach Fast",
+          "result": "70+ Qualified Meetings booked within first 2 months",
+          "results": [
+            { "text": "70+ Qualified Meetings booked within first 2 months" },
+            { "text": "10X Email Volume (200 → 2000/day)" },
+            { "text": "2X Response Rate vs previous manual outreach" }
+          ]
+        },
+        {
+          "title": "Entice MM: Eliminating Manual Instagram Engagement",
+          "result": "3X More Meetings & 75% Cost Reduction",
+          "results": [
+            { "text": "3X More Meetings (tripled consultations)" },
+            { "text": "Automated IG bot handling replies and follow-ups" },
+            { "text": "75% Cost Reduction (replaced 4 full-time VAs)" }
+          ]
+        },
+        {
+          "title": "Marketing Agency (NDA): Upwork Proposal Automation",
+          "result": "20X faster proposals, 35% higher win rate",
+          "challenge": "Agency relied solely on Upwork but wasted hours writing manual proposals",
+          "challengeLabel": "Problem",
+          "solution": "Built GPT-4 Upwork Proposal Generator",
+          "results": [
+            { "text": "20X faster proposal creation" },
+            { "text": "35% higher win rate" },
+            { "text": "7 new clients in 30 days" }
+          ]
+        }
+      ],
+      "ctaPrompt": "Ready to see results like these for your business?",
+      "ctaText": "View Detailed Results",
+      "ctaHref": "#audit"
+    },
+    "pricing": {
+      "title": "Choose Your Growth Path",
+      "popularBadge": "Most Popular",
+      "subtitle": "Whether you want us to handle everything or guide you through the process",
+      "tiers": [
+        {
+          "title": "Done-For-You Service",
+          "price": "Get Quote",
+          "priceLabel": "/month",
+          "features": [
+            { "text": "Complete setup and management" },
+            { "text": "AI-powered prospect research" },
+            { "text": "Personalized outreach campaigns" },
+            { "text": "Multi-channel engagement" },
+            { "text": "15-25 qualified leads guaranteed" },
+            { "text": "Weekly performance reports" },
+            { "text": "Dedicated account manager" },
+            { "text": "Full refund guarantee" }
+          ],
+          "ctaText": "Get Started Today",
+          "ctaHref": "#audit",
+          "isPopular": true
+        },
+        {
+          "title": "Self-Setup (We'll Help)",
+          "price": "Free",
+          "priceLabel": "Setup assistance",
+          "features": [
+            { "text": "Complete system blueprint" },
+            { "text": "Step-by-step training videos" },
+            { "text": "AI tools and templates" },
+            { "text": "Setup guidance calls" },
+            { "text": "Email support" },
+            { "text": "Community access" },
+            { "text": "Pay only for tools used" },
+            { "text": "Upgrade anytime" }
+          ],
+          "ctaText": "Start Free Setup",
+          "ctaHref": "#audit",
+          "isPopular": false
+        }
+      ]
+    },
+    "guarantee": {
+      "title": "100% Risk-Free Guarantee",
+      "subtitle": "Full Refund if We Don't Hit Target",
+      "body": "We're so confident in our system that we guarantee 15-25 qualified leads per month. If we don't deliver on our promise within the first 90 days, you get a full refund. No questions asked.",
+      "footnote": "* Qualified leads are defined as prospects who match your ideal customer profile and have expressed genuine interest in your service."
+    },
+    "final-cta": {
+      "title": "Ready to Scale Your Lead Generation?",
+      "body": "Book a free 30-minute consultation to see how we can generate 15-25 qualified leads for your business every month.",
+      "subtext": "30-minute call · Free consultation · No strings attached",
+      "bulletsTitle": "What We'll Cover:",
+      "bullets": [
+        { "text": "Analyze your current lead generation" },
+        { "text": "Identify your ideal customer profile" },
+        { "text": "Create a custom lead generation strategy" },
+        { "text": "Show you exactly how we'll get 15-25 leads/month" }
+      ],
+      "ctaText": "Book Your Free Call Now",
+      "ctaHref": "#audit",
+      "footerNote": "No strings attached. Even if we're not a fit, you'll leave with valuable insights about scaling your lead generation."
+    }
+  },
+  "about": {
+    "title": "About the strapi blog",
+    "blocks": [
+      {
+        "__component": "shared.quote",
+        "title": "Thelonius Monk",
+        "body": "You've got to dig it to dig it, you dig?"
+      },
+      {
+        "__component": "shared.rich-text",
+        "body": "## Dedit imago conspicuus cum capillis totidem inhibere\n\nLorem markdownum **rerum**, est limine: columbas: ab infelix hostem arbore nudis\ncrudelis. Videtur reliquit ambo ferrum dote sub amne fatis **illuc**, in magis,\nnec."
+      },
+      {
+        "__component": "shared.media",
+        "file": "coffee-art.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch for a free audit or to learn how we can help scale your lead generation.",
+    "body": "We'd love to hear from you. Whether you're ready to book a free consultation or just have questions, reach out anytime.",
+    "email": "hello@aiseen.com",
+    "phone": null
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "body": "Welcome to AISEEN. By using our services, you agree to these terms. Please read them carefully.\n\n## Use of Services\n\nOur lead generation and automation services are provided for business use. You agree to use them in compliance with applicable laws.\n\n## Contact\n\nFor questions about these terms, contact us at hello@aiseen.com."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "body": "AISEEN respects your privacy. This policy explains how we collect, use, and protect your information.\n\n## Information We Collect\n\nWe collect information you provide when contacting us or using our services, including name, email, and company details.\n\n## How We Use It\n\nWe use your information to deliver our services, communicate with you, and improve our offerings.\n\n## Contact\n\nFor privacy questions, email hello@aiseen.com."
+  },
+  "emailModal": {
+    "title": "Get Lead Gen Tips",
+    "subtitle": "Subscribe to get the latest strategies and insights delivered to your inbox.",
+    "emailPlaceholder": "Enter your email",
+    "submitText": "Subscribe",
+    "successMessage": "Thanks! Check your inbox for our first email.",
+    "enabled": true
+  },
+  "categories": [
+    {
+      "name": "news",
+      "slug": "news"
+    },
+    {
+      "name": "tech",
+      "slug": "tech"
+    },
+    {
+      "name": "food",
+      "slug": "food"
+    },
+    {
+      "name": "nature",
+      "slug": "nature"
+    },
+    {
+      "name": "story",
+      "slug": "story"
+    }
+  ],
+  "authors": [
+    {
+      "name": "David Doe",
+      "email": "daviddoe@strapi.io",
+      "avatar": "daviddoe@strapi.io.jpg"
+    },
+    {
+      "name": "Sarah Baker",
+      "email": "sarahbaker@strapi.io",
+      "avatar": "sarahbaker@strapi.io.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "title": "The internet's Own boy",
+      "slug": "the-internet-s-own-boy",
+      "category": {
+        "id": 5
+      },
+      "author": {
+        "id": 1
+      },
+      "description": "Follow the story of Aaron Swartz, the boy who could change the world",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    },
+    {
+      "title": "This shrimp is awesome",
+      "slug": "this-shrimp-is-awesome",
+      "category": {
+        "id": 4
+      },
+      "author": {
+        "id": 1
+      },
+      "description": "Mantis shrimps, or stomatopods, are marine crustaceans of the order Stomatopoda.",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    },
+    {
+      "title": "A bug is becoming a meme on the internet",
+      "slug": "a-bug-is-becoming-a-meme-on-the-internet",
+      "category": {
+        "id": 2
+      },
+      "author": {
+        "id": 2
+      },
+      "description": "How a bug on MySQL is becoming a meme on the internet",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    },
+    {
+      "title": "Beautiful picture",
+      "slug": "beautiful-picture",
+      "category": {
+        "id": 4
+      },
+      "author": {
+        "id": 2
+      },
+      "description": "Description of a beautiful picture",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    },
+    {
+      "title": "What's inside a Black Hole",
+      "slug": "what-s-inside-a-black-hole",
+      "category": {
+        "id": 1
+      },
+      "author": {
+        "id": 2
+      },
+      "description": "Maybe the answer is in this article, or not...",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    }
+  ]
+}

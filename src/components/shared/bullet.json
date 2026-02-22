@@ -1,0 +1,8 @@
+{
+  "collectionName": "components_shared_bullets",
+  "info": { "name": "Bullet", "displayName": "Bullet" },
+  "options": {},
+  "attributes": {
+    "text": { "type": "string", "required": true }
+  }
+}

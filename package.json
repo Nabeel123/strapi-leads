@@ -12,6 +12,7 @@
     "seed:example": "node ./scripts/seed.js",
     "postinstall": "npm rebuild better-sqlite3 2>/dev/null || true",
     "set-permissions": "node ./scripts/set-permissions.js",
+    "test:smtp": "node ./scripts/test-smtp.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",

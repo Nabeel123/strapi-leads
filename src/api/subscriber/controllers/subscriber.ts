@@ -55,9 +55,17 @@ export default factories.createCoreController('api::subscriber.subscriber', ({ s
       ctx.status = 201;
       ctx.body = { data: doc, message: 'Subscribed successfully' };
     } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
       strapi.log.error('Subscriber submit error:', err);
       ctx.status = 500;
-      ctx.body = { error: { message: 'Failed to subscribe' } };
+      ctx.body = {
+        data: null,
+        error: {
+          status: 500,
+          name: 'InternalServerError',
+          message: process.env.NODE_ENV === 'development' ? message : 'Failed to subscribe',
+        },
+      };
     }
   },
 }));

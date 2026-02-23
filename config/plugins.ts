@@ -1,10 +1,10 @@
 import type { Core } from '@strapi/strapi';
 
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => {
-  const apiKey = env('MAILERSEND_API_KEY');
-  const smtpUser = env('SMTP_USERNAME');
-  const smtpPass = env('SMTP_PASSWORD');
-  const from = env('MAILER_FROM', 'noreply@aiseen.co');
+  const apiKey = env('MAILERSEND_API_KEY') || process.env.MAILERSEND_API_KEY;
+  const smtpUser = env('SMTP_USERNAME') || process.env.SMTP_USERNAME;
+  const smtpPass = env('SMTP_PASSWORD') || process.env.SMTP_PASSWORD;
+  const from = env('MAILER_FROM') || process.env.MAILER_FROM || 'noreply@aiseen.co';
 
   // Prefer Nodemailer SMTP when credentials are set (works better for real recipients;
   // MailerSend API can restrict unverified recipients). Fall back to MailerSend API only if SMTP not configured.

@@ -57,7 +57,7 @@ export default factories.createCoreController('api::subscriber.subscriber', ({ s
         subject,
         text: body,
         html: `<p>${body.replace(/\n/g, '</p><p>')}</p>`,
-      }).catch((err: Error & { statusCode?: number; body?: { message?: string; errors?: { message?: string }[] } }) => {
+      }).catch((err: Error & { statusCode?: number; status?: number; body?: { message?: string; errors?: { message?: string }[] } }) => {
         const msg = err?.body?.message ?? err?.body?.errors?.[0]?.message ?? err?.message;
         const code = err?.statusCode ?? err?.status;
         strapi.log.warn(`Subscriber autoreply failed [${code || '?'}]: ${msg || String(err)}`);

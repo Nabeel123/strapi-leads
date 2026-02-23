@@ -2,6 +2,9 @@ import { factories } from '@strapi/strapi';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const AUTOREPLY_SUBJECT = 'Thankyou for Subscribing';
+const AUTOREPLY_BODY = 'Testing body';
+
 export default factories.createCoreController('api::subscriber.subscriber', ({ strapi }) => ({
   async submit(ctx: { request: { body?: { email?: string; source?: string } }; body?: unknown; status?: number }) {
     const { email, source = 'scroll_modal' } = ctx.request?.body ?? {};
@@ -38,6 +41,16 @@ export default factories.createCoreController('api::subscriber.subscriber', ({ s
           subscribedAt: new Date().toISOString(),
         },
       } as never);
+
+      // Send autoreply via nodemailer (non-blocking; don't fail subscription if email fails)
+      strapi.plugin('email').service('email').send({
+        to: trimmed,
+        subject: AUTOREPLY_SUBJECT,
+        text: AUTOREPLY_BODY,
+        html: `<p>${AUTOREPLY_BODY}</p>`,
+      }).catch((err: Error) => {
+        strapi.log.warn('Subscriber autoreply email failed:', err?.message ?? err);
+      });
 
       ctx.status = 201;
       ctx.body = { data: doc, message: 'Subscribed successfully' };

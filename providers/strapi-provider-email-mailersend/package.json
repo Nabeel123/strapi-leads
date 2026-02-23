@@ -1,0 +1,6 @@
+{
+  "name": "strapi-provider-email-mailersend",
+  "version": "1.0.0",
+  "description": "MailerSend API provider for Strapi email plugin",
+  "main": "index.js"
+}

@@ -13,6 +13,7 @@
     "postinstall": "npm rebuild better-sqlite3 2>/dev/null || true",
     "set-permissions": "node ./scripts/set-permissions.js",
     "test:smtp": "node ./scripts/test-smtp.js",
+    "test:mailersend": "node ./scripts/test-mailersend-api.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
@@ -32,7 +33,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "strapi-google-analytics-dashboard": "^0.0.2",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.0.0",
+    "strapi-provider-email-mailersend": "file:./providers/strapi-provider-email-mailersend"
   },
   "devDependencies": {
     "@types/node": "^20",

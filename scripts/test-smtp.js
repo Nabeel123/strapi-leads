@@ -2,23 +2,39 @@
 /**
  * Test SMTP connection using backend .env credentials.
  * Run: node scripts/test-smtp.js [recipient@example.com]
- * Helps verify nodemailer/MailerSend config before debugging Strapi.
+ * Use SMTP_PORT=2525 to try alternate port if 587 fails.
  */
 'use strict';
 
-require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
 const nodemailer = require('nodemailer');
 
 const to = process.argv[2] || process.env.SMTP_USERNAME || 'test@example.com';
 const host = process.env.SMTP_HOST || 'smtp.mailersend.net';
 const port = parseInt(process.env.SMTP_PORT || '587', 10);
-const user = process.env.SMTP_USERNAME;
-const pass = process.env.SMTP_PASSWORD;
-const from = process.env.MAILER_FROM || 'noreply@aiseen.co';
+const user = (process.env.SMTP_USERNAME || '').trim();
+const pass = (process.env.SMTP_PASSWORD || '').trim();
+const from = (process.env.MAILER_FROM || 'noreply@aiseen.co').trim();
+
+// Trim helps avoid copy-paste issues; show length to detect truncation
+const userLen = user.length;
+const passLen = pass.length;
 
 if (!user || !pass) {
   console.error('Missing SMTP_USERNAME or SMTP_PASSWORD in .env');
   process.exit(1);
+}
+
+console.log('Using:', {
+  host,
+  port,
+  user: user.slice(0, 15) + '***',
+  userLength: userLen,
+  passLength: passLen,
+});
+if (userLen < 10 || passLen < 20) {
+  console.warn('Warning: Username or password looks short. MailerSend passwords are usually ~50 chars.');
 }
 
 const transporter = nodemailer.createTransport({
@@ -31,12 +47,14 @@ const transporter = nodemailer.createTransport({
 });
 
 async function main() {
-  console.log('Testing SMTP...', { host, port, user: user?.slice(0, 10) + '***' });
   try {
     await transporter.verify();
     console.log('SMTP connection OK');
   } catch (err) {
     console.error('SMTP verify failed:', err.message);
+    if (port === 587) {
+      console.log('\nTry port 2525: SMTP_PORT=2525 npm run test:smtp');
+    }
     process.exit(1);
   }
   try {

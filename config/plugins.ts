@@ -2,9 +2,37 @@ import type { Core } from '@strapi/strapi';
 
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => {
   const apiKey = env('MAILERSEND_API_KEY');
+  const smtpUser = env('SMTP_USERNAME');
+  const smtpPass = env('SMTP_PASSWORD');
   const from = env('MAILER_FROM', 'noreply@aiseen.co');
 
-  // MailerSend API (when MAILERSEND_API_KEY set)
+  // Prefer Nodemailer SMTP when credentials are set (works better for real recipients;
+  // MailerSend API can restrict unverified recipients). Fall back to MailerSend API only if SMTP not configured.
+  if (smtpUser && smtpPass) {
+    const providerOptions: Record<string, unknown> = {
+      host: env('SMTP_HOST', 'smtp.mailersend.net'),
+      port: env.int('SMTP_PORT', 587),
+      secure: false,
+      requireTLS: true,
+      auth: { user: smtpUser, pass: smtpPass },
+      tls: { rejectUnauthorized: env.bool('SMTP_TLS_REJECT_UNAUTHORIZED', true) },
+    };
+
+    return {
+      email: {
+        config: {
+          provider: 'nodemailer',
+          providerOptions,
+          settings: {
+            defaultFrom: from,
+            defaultReplyTo: from,
+          },
+        },
+      },
+    };
+  }
+
+  // MailerSend API (when SMTP not configured but MAILERSEND_API_KEY is set)
   if (apiKey) {
     return {
       email: {
@@ -20,29 +48,16 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
     };
   }
 
-  // Nodemailer SMTP
-  const user = env('SMTP_USERNAME');
-  const pass = env('SMTP_PASSWORD');
-  const providerOptions: Record<string, unknown> = {
-    host: env('SMTP_HOST', 'smtp.mailersend.net'),
-    port: env.int('SMTP_PORT', 587),
-    secure: false,
-    requireTLS: true,
-    tls: { rejectUnauthorized: env.bool('SMTP_TLS_REJECT_UNAUTHORIZED', true) },
-  };
-  if (user && pass) {
-    providerOptions.auth = { user, pass };
-  }
-
+  // No SMTP or API key - emails will fail; user should configure SMTP_* or MAILERSEND_API_KEY
   return {
     email: {
       config: {
         provider: 'nodemailer',
-        providerOptions,
-        settings: {
-          defaultFrom: from,
-          defaultReplyTo: from,
+        providerOptions: {
+          host: env('SMTP_HOST', 'smtp.mailersend.net'),
+          port: env.int('SMTP_PORT', 587),
         },
+        settings: { defaultFrom: from, defaultReplyTo: from },
       },
     },
   };

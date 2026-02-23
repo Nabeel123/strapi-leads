@@ -316,6 +316,8 @@
     "emailPlaceholder": "Enter your email",
     "submitText": "Subscribe",
     "successMessage": "Thanks! Check your inbox for our first email.",
+    "autoreplySubject": "Thanks for subscribing!",
+    "autoreplyBody": "You're on the list. We'll send you lead gen tips and strategies soon.",
     "enabled": true
   },
   "categories": [

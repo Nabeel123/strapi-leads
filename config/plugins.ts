@@ -4,7 +4,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
   const apiKey = env('MAILERSEND_API_KEY');
   const from = env('MAILER_FROM', 'noreply@aiseen.co');
 
-  // Use MailerSend API (more reliable than SMTP; get API key from Settings → API Tokens)
+  // MailerSend API (when MAILERSEND_API_KEY set)
   if (apiKey) {
     return {
       email: {
@@ -20,7 +20,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
     };
   }
 
-  // Fallback to nodemailer SMTP if MAILERSEND_API_KEY not set
+  // Nodemailer SMTP
   const user = env('SMTP_USERNAME');
   const pass = env('SMTP_PASSWORD');
   const providerOptions: Record<string, unknown> = {

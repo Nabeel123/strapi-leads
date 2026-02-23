@@ -675,6 +675,10 @@ export interface ApiEmailModalEmailModal extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    autoreplyBody: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<"You're on the list. We'll send you lead gen tips and strategies soon.">;
+    autoreplySubject: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Thanks for subscribing!'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

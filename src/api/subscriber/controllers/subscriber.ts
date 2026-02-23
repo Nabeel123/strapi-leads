@@ -2,8 +2,8 @@ import { factories } from '@strapi/strapi';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const AUTOREPLY_SUBJECT = 'Thankyou for Subscribing';
-const AUTOREPLY_BODY = 'Testing body';
+const DEFAULT_SUBJECT = 'Thanks for subscribing!';
+const DEFAULT_BODY = "You're on the list. We'll send you lead gen tips and strategies soon.";
 
 export default factories.createCoreController('api::subscriber.subscriber', ({ strapi }) => ({
   async submit(ctx: { request: { body?: { email?: string; source?: string } }; body?: unknown; status?: number }) {
@@ -42,14 +42,23 @@ export default factories.createCoreController('api::subscriber.subscriber', ({ s
         },
       } as never);
 
-      // Send autoreply via nodemailer (non-blocking; don't fail subscription if email fails)
+      // Fetch template from email-modal (Strapi CMS)
+      const template = (await strapi.documents('api::email-modal.email-modal').findFirst()) as
+        | { autoreplySubject?: string; autoreplyBody?: string }
+        | null;
+      const subject = (template?.autoreplySubject?.trim() || DEFAULT_SUBJECT) as string;
+      const body = (template?.autoreplyBody?.trim() || DEFAULT_BODY) as string;
+
+      // Send autoreply from noreply@aiseen.co using template from Strapi (non-blocking)
+      const fromAddress = process.env.MAILER_FROM || 'noreply@aiseen.co';
       strapi.plugin('email').service('email').send({
+        from: fromAddress,
         to: trimmed,
-        subject: AUTOREPLY_SUBJECT,
-        text: AUTOREPLY_BODY,
-        html: `<p>${AUTOREPLY_BODY}</p>`,
-      }).catch((err: Error) => {
-        strapi.log.warn('Subscriber autoreply email failed:', err?.message ?? err);
+        subject,
+        text: body,
+        html: `<p>${body.replace(/\n/g, '</p><p>')}</p>`,
+      }).catch((err: Error & { statusCode?: number; body?: { message?: string } }) => {
+        strapi.log.warn('Subscriber autoreply email failed:', err?.message ?? err?.body?.message ?? err);
       });
 
       ctx.status = 201;

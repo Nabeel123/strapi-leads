@@ -33,6 +33,14 @@
       "type": "text",
       "default": "Thanks! Check your inbox for our first email."
     },
+    "autoreplySubject": {
+      "type": "string",
+      "default": "Thanks for subscribing!"
+    },
+    "autoreplyBody": {
+      "type": "text",
+      "default": "You're on the list. We'll send you lead gen tips and strategies soon."
+    },
     "enabled": {
       "type": "boolean",
       "default": true
